@@ -1,66 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
-    background-color: #000;
+    background-color: #111827;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 50px;
-    text-align: center;
 }
 
-h1 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
-    color: #ff69b4; 
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    animation: pulse 2s infinite alternate;
+.profile-pic {
+    border-width: 4px;
 }
 
-p {
-    font-size: 1.4em;
-    line-height: 1.6;
-    color: #999;
-    transition: color 0.3s ease;
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
 }
 
-a {
-    color: #ff69b4;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Sync with body background color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 9999;
 }
 
-a:hover {
-    color: #f0f;
+.notification.show {
+    opacity: 1;
 }
 
-@keyframes pulse {
+
+.bg-gray-900 {
+    background-color: #111827; /* Sync with body background color */
+}
+
+.text-gray-900 {
+    color: #fff; /* Sync with body text color */
+}
+
+@keyframes fadeIn {
     0% {
-        transform: scale(1);
+        opacity: 0;
     }
     100% {
-        transform: scale(1.05);
+        opacity: 1;
     }
 }
 
-/* Responsive Styling */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 30px;
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
     }
-
-    h1 {
-        font-size: 2.5em;
+    100% {
+        opacity: 0;
     }
+}
 
-    p {
-        font-size: 1.2em;
+/* Apply animation to the switch icon */
+#icon {
+    animation: fadeIn 0.2s ease-out forwards; /* Initial fade-in animation */
+}
+
+/* Adjust opacity after the fade-out animation to maintain visibility */
+#color-switcher:active #icon {
+    opacity: 0.5;
+}
+
+/* Apply fade-out animation when toggling color */
+#color-switcher:active #icon {
+    animation: fadeOut 0.2s ease-out forwards; /* Fade-out animation on toggle */
+}
+
+.spinning-image {
+    position: fixed;
+    transform-origin: center;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }

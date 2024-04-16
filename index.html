@@ -2,22 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <div class="container" data-aos="fade-up" data-aos-duration="3000">
-        <h1>Goals</h1>
-        <p>Hello, my name is Shinni, but I go by the name Hana. I was born on April 5th, 2005. I am a transgender female with various aspirations and interests. Currently residing in Bulgaria, I appreciate the country's charm but seek to leave due to many reasons, including encountering narrow-minded/closed-minded attitudes, a lack of professional doctors, and insufficient support for the LGBTQ+ community.</p>
-<p>My journey involves focusing on my transition, including seeking to obtain prescribed hormone replacement therapy. Upon relocating, I plan to undergo surgeries such as bottom surgery, Adam's apple reduction, voice feminization, and potentially facial feminization.</p>
-<p>In addition to my transition journey, I am committed to self-improvement and education. I am dedicated to learning coding languages and expanding my skills in various areas. My ultimate goal is to enroll at Malta University, and I am working towards achieving the necessary qualifications, including taking the IELTS exam.</p>
-<p>In the future, I aspire to work in the field of technology and pursue interests in cosplay and content creation as a Vtuber. You can find me on Twitter <a href="https://twitter.com/ShinniOffical">here</a>.</p>
-
-        <script>AOS.init()</script>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto py-8 px-4">
+        
+        <div class="text-center">
+            <img src="https://cdn.discordapp.com/avatars/310773553102585856/2c2ec28d2e03634c6b5363c6e6e56870.webp?size=100" alt="Profile Picture" id="profile-pic" class="profile-pic rounded-full w-24 h-24 mx-auto mb-4">
+            <h1 class="text-4xl font-bold text-pink-500 mb-4">Goals</h1>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">Hello, my name is Shinni, but I go by the name Hana. I was born on April 5th, 2005. I am a transgender female with various aspirations and interests. Currently residing in Bulgaria, I appreciate the country's charm but seek to leave due to many reasons, including encountering narrow-minded/closed-minded attitudes, a lack of professional doctors, and insufficient support for the LGBTQ+ community.</p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">My journey involves focusing on my transition, including seeking to obtain prescribed hormone replacement therapy. Upon relocating, I plan to undergo surgeries such as bottom surgery, Adam's apple reduction, voice feminization, and potentially facial feminization.</p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">In addition to my transition journey, I am committed to self-improvement and education. I am dedicated to learning coding languages and expanding my skills in various areas. My ultimate goal is to enroll at Malta University, and I am working towards achieving the necessary qualifications, including taking the IELTS exam.</p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">In the future, I aspire to work in the field of technology and pursue interests in cosplay and content creation as a Vtuber. </p>
+            <div class="social-links mt-8">
+                <a href="https://twitter.com/ShinniOffical" class="text-gray-400 hover:text-gray-300 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="" id="discord-link" class="discord-link text-gray-400 hover:text-gray-300 mx-2"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/ShinniUwU" class="text-gray-400 hover:text-gray-300 mx-2"><i class="fa-brands fa-github"></i>
+                <a href="https://t.me/shinniowo" class="text-gray-400 hover:text-gray-300 mx-2"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+        <button id="color-switcher" class="fixed top-0 left-0 m-4 z-10 bg-transparent hover:bg-pink-500 text-pink-500 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded-full">
+            <i id="icon" class="fas fa-sun"></i>
+        </button>
     </div>
+    <div id="notification" class="notification">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
